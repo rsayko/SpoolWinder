@@ -36,7 +36,7 @@ test_height = 15;
 
 TheTool();
 
-translate([spool_diameter/18,hole_diameter,wall_thickness/2]) t("DrukArmY", s = spool_diameter/12, spacing = 1);
+translate([spool_diameter/18,hole_diameter,wall_thickness/2]) t("ДрукАрміЯ", s = spool_diameter/13, spacing = 1);
 
 difference() {
 translate([0,-hole_diameter - plate_height*2, -wall_thickness/2])
