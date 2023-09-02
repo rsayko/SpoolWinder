@@ -78,7 +78,7 @@ module Handle(){
         
         radius_start = (hole_diameter + plate_height) / 2;
         radius_end = hole_diameter;
-        cylinder(h = handle_distance + handle_diameter / 2 + nozzle_diameter, r1 = radius_start, r2 = radius_end, center = false);
+        cylinder(h = handle_distance + handle_diameter / 2 + nozzle_diameter, r1 = radius_start, r2 = radius_end, $fn=24*handle_diameter, center = false);
         
         width = hole_diameter;
         height = handle_distance + handle_diameter/2 - wall_thickness/2;
@@ -96,7 +96,7 @@ module Handle(){
 module Handle_part_base(){
     rotate([-90, 0, 0])
     translate([0,-handle_distance,hole_diameter])
-    cylinder(h = spool_diameter - plate_height - hole_diameter * 2, r = handle_diameter/2, center = false);
+    cylinder(h = spool_diameter - plate_height - hole_diameter * 2, r = handle_diameter/2, $fn=24*handle_diameter, center = false);
     translate([- (hole_diameter / 2) - plate_height,0,wall_thickness / 2])
     cube([hole_diameter + plate_height * 2, hole_diameter, handle_distance + handle_diameter/2 - wall_thickness/2], center = false);
     
@@ -116,10 +116,10 @@ module Base(offset = 0, is_bottom_plate = false){
         Base_part_platform(offset, is_bottom_plate);
         translate([offset,0,0])
         
-        cylinder(h = wall_thickness + nozzle_diameter * 2, r = (hole_diameter/2) + (nozzle_diameter * 2), center = true);
+        cylinder(h = wall_thickness + nozzle_diameter * 2, r = (hole_diameter/2) + (nozzle_diameter * 2),$fn=24*hole_diameter, center = true);
       
         translate([offset,spool_diameter,0])
-        cylinder(h = wall_thickness + nozzle_diameter * 2, r = (hole_diameter/2) + (nozzle_diameter * 2), center = true);
+        cylinder(h = wall_thickness + nozzle_diameter * 2, r = (hole_diameter/2) + (nozzle_diameter * 2),$fn=24*hole_diameter, center = true);
         }
     
 }
@@ -128,9 +128,9 @@ module Base_part_platform(offset = 0, is_bottom_plate = false){
     
     
     translate([offset,0,0])
-    cylinder(h = wall_thickness, r = (hole_diameter/2) + plate_height, center = true);
+    cylinder(h = wall_thickness, r = (hole_diameter/2) + plate_height, $fn=24*hole_diameter, center = true);
     translate([offset,spool_diameter,0])
-    cylinder(h = wall_thickness, r = (hole_diameter/2) + plate_height, center = true);
+    cylinder(h = wall_thickness, r = (hole_diameter/2) + plate_height, $fn=24*hole_diameter, center = true);
     translate([offset,spool_diameter/2,0])
     cube([(hole_diameter + (plate_height * 2)), spool_diameter, wall_thickness], center = true);
 }
