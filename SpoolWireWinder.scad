@@ -35,6 +35,7 @@ wall_thickness = 3.5;
 test_height = 15;
 
 TheTool();
+translate([hole_diameter + plate_height * 2,0,0]) TheTool();
 
 translate([spool_diameter/18,hole_diameter,wall_thickness/2]) t("ДрукАрміЯ", s = spool_diameter/13, spacing = 1);
 
