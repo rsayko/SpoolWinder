@@ -5,7 +5,7 @@
 
 1. Завантажуєш OpenScad https://openscad.org/downloads.html
 2. Відкриваєш файл SpoolWireWinder.scad
-3. Вводиш параметри на панелі зправа
+3. Вводиш параметри на панелі зправа. Поміряй все як на останніх двох зображеннях (все у міліметрах)
    
    ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/b89b4180-aef9-4188-adfd-30f25611eea1)
 
