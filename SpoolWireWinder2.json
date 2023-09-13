@@ -1,0 +1,22 @@
+{
+    "parameterSets": {
+        "design default values": {
+            "handle_diameter": "30",
+            "handle_distance": "45",
+            "holder_bottom_fillet": "20",
+            "holder_top_fillet": "20",
+            "hole_diameter": "35",
+            "hollow_base": "true",
+            "hollow_plate": "true",
+            "nozzle_diameter": "0.4",
+            "number_of_connectors": "5",
+            "plate_height": "20",
+            "render_quality": "6",
+            "split_base": "true",
+            "spool_diameter": "175",
+            "spool_width": "60",
+            "wall_thickness": "3.5"
+        }
+    },
+    "fileFormatVersion": "1"
+}
