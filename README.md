@@ -1,29 +1,20 @@
 # SpoolWinder
 3d print wire winder and connect two spools of used plastic
+![image](https://github.com/rsayko/SpoolWinder/assets/33004022/1e69d4d8-12d4-4916-8b71-cae2f8458626)
 
 Більш детальна інструкція буде скоро
-![image](https://github.com/rsayko/SpoolWinder/assets/33004022/a0952d72-8759-44c8-9e9b-ac55f66962ec)
 
 1. Завантажуєш OpenScad https://openscad.org/downloads.html
 2. Скачуєш проект SpoolWinder https://github.com/rsayko/SpoolWinder
-3. Відкриваєш файл SpoolWireWinder2.scad (файл threads.scad має бути в тій самій папці де і SpoolWinder.scad)
+3. Відкриваєш файл SpoolWireWinder2.scad (файл threads.scad має бути в тій самій папці де і SpoolWinder2.scad)
 4. Вводиш параметри на панелі зправа. Поміряй все як на останніх двох зображеннях (все у міліметрах)
-   
-   ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/b89b4180-aef9-4188-adfd-30f25611eea1)
-
 5. Натискаєш кнопку кубика з пісочним годинником
-   ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/702fb9a2-c4a6-475f-b9a8-994234c11f33)
+   ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/5eea4650-0ed0-4a29-9956-277f74490303)
 
-6. Чекаєш декілька хвилин (може бути таке що ОпенСкад виключиться, таке буває, спробуй ще)
-7. Натискаєш кнопку STL
 
-   ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/a5136503-402a-4d1b-ade2-2faf71ad31d8)
+7. Чекаєш декілька хвилин (може бути таке що ОпенСкад виключиться, таке буває, спробуй ще)
+8. Натискаєш кнопку STL
+![image](https://github.com/rsayko/SpoolWinder/assets/33004022/b8eb0504-e6ab-4317-9dd3-973eb66b6019)
+
 9. Відкриваєш у слайсері
 10. Якщо слайсей не підтримує розєднання обєкту то скористайся плагіном, наприклад для Cura є плагін MeshTools
-![image](https://github.com/rsayko/SpoolWinder/assets/33004022/5c6ef114-95bc-4a1d-9b44-5097b79da26b)
-
-Basic settings
-![basic](https://github.com/rsayko/SpoolWinder/assets/33004022/a6ab81fa-9077-4e14-824a-383cd2abf5df)
-
-Advanced settings
-![advanced](https://github.com/rsayko/SpoolWinder/assets/33004022/a2cc88d6-b07e-47f5-944d-ff9b1d483a8a)
