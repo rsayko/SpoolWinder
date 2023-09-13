@@ -2,6 +2,7 @@
 3d print wire winder and connect two spools of used plastic
 
 Більш детальна інструкція буде скоро
+![image](https://github.com/rsayko/SpoolWinder/assets/33004022/a0952d72-8759-44c8-9e9b-ac55f66962ec)
 
 1. Завантажуєш OpenScad https://openscad.org/downloads.html
 2. Скачуєш проект SpoolWinder https://github.com/rsayko/SpoolWinder
