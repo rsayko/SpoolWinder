@@ -50,7 +50,8 @@ A: Так, вітається будь яка допомога з наімену
 
 #### hollow_plate  
 Параметр зробить дирку в основі, це зекономить час та пластик, але послабить саму структуру  
-![hollow_plate](https://github.com/rsayko/SpoolWinder/assets/33004022/2f09a9b6-92b5-403c-be3d-fd7a5b7f784b)
+![hollow_plate](https://github.com/rsayko/SpoolWinder/assets/33004022/7707e0d1-1349-4b1a-afa1-c46d22dd5886)
+
 
 ### Split   
 TBD  
