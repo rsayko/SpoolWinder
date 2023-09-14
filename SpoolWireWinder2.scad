@@ -73,7 +73,7 @@ if(separate_handle){
      cylinder(h = spool_diameter - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);   
 }
 
-/*TheTool();
+TheTool();
 translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
 
 //Rod Start
@@ -96,7 +96,7 @@ cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
 }
-*/
+
 module Plate(is_first){
   
    Base(false, is_first);
