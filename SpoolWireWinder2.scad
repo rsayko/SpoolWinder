@@ -98,9 +98,9 @@ module Handle_part_base(is_second_half){
     
     //Handle
     if(!separate_handle){
-        translate([0,hole_diameter,wall_thickness + handle_distance + handle_diameter/2])
+        translate([0,0,wall_thickness + handle_distance + handle_diameter/2])
         rotate([-90,0,0])
-        cylinder(h = spool_diameter/2 - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
+        cylinder(h = spool_radius + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
         if(split_base){
             if(!is_second_half){
                 translate([0,spool_radius,wall_thickness + handle_distance + handle_diameter/2])
@@ -113,9 +113,9 @@ module Handle_part_base(is_second_half){
     
     
     //Handle chamfer
-    translate([0,hole_diameter-plate_height/2,wall_thickness + handle_distance + handle_diameter/2])
+    translate([0,hole_radius+plate_height/4,wall_thickness + handle_distance + handle_diameter/2])
     rotate([-90,0,0])
-    cylinder(h = handle_champfer, r1 = handle_diameter*0.7, r2 = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
+    cylinder(h = handle_champfer, r1 = handle_champfer, r2 = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
  }
 
 module Handle_part_base_cut(is_second_half){
