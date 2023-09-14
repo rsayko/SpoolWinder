@@ -230,7 +230,7 @@ module ClosePoints(pointarrays) {
 
 // This creates a vertical rod at the origin with external threads.  It uses
 // metric standards by default.
-module ScrewThread(outer_diam, height, pitch=0, tooth_angle=30, tolerance=0.4, tip_height=0, tooth_height=0, tip_min_fract=0) {
+module ScrewThread(outer_diam, height, pitch=0, tooth_angle=45, tolerance=0.4, tip_height=0, tooth_height=0, tip_min_fract=0) {
 
   pitch = (pitch==0) ? ThreadPitch(outer_diam) : pitch;
   tooth_height = (tooth_height==0) ? pitch : tooth_height;
@@ -344,7 +344,7 @@ module AugerThread(outer_diam, inner_diam, height, pitch, tooth_angle=30, tolera
 
 // This creates a threaded hole in its children using metric standards by
 // default.
-module ScrewHole(outer_diam, height, position=[0,0,0], rotation=[0,0,0], pitch=0, tooth_angle=30, tolerance=0.4, tooth_height=0) {
+module ScrewHole(outer_diam, height, position=[0,0,0], rotation=[0,0,0], pitch=0, tooth_angle=45, tolerance=0.4, tooth_height=0) {
   extra_height = 0.001 * height;
 
   difference() {
@@ -581,7 +581,7 @@ module RodEnd2(diameter, height, base_diameter, base_height, thread_len=0, threa
   thread_pitch = (thread_pitch==0) ? ThreadPitch(thread_diam) : thread_pitch;
   ScrewHole(thread_diam, thread_len, [0, 0, height], [180,0,0], thread_pitch)
     cylinder(r=diameter/2, h=height, $fn=24*diameter);
-  cylinder(r=base_diameter/2, h=base_height);
+  cylinder(r=base_diameter/2, h=base_height, $fn=24*base_diameter);
 }
 
 // Internal threads on the bottom, external threads on the top.
