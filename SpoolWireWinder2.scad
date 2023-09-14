@@ -41,7 +41,7 @@ handle_distance = 45;
 handle_margin = 3;
 
 //additional material for handle on the beggining
-handle_champfer = 15; //[0:50]
+handle_champfer = 20; //[0:50]
 
 //print handle separated from base
 separate_handle = false;
@@ -73,7 +73,7 @@ if(separate_handle){
      cylinder(h = spool_diameter - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);   
 }
 
-TheTool();
+/*TheTool();
 translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
 
 //Rod Start
@@ -88,7 +88,7 @@ cylinder(h=spool_width,
 
 //Rod End
 difference() {
-translate([hole_diameter*2,-hole_diameter - plate_height*2, -wall_thickness/2])
+translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, -wall_thickness/2])
 RodEnd2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8, hole_diameter + plate_height- (nozzle_diameter * 2), wall_thickness);
 
 translate([hole_diameter*2,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness]) 
@@ -96,7 +96,7 @@ cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
 }
-
+*/
 module Plate(is_first){
   
    Base(false, is_first);
