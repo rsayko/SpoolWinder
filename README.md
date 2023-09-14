@@ -1,11 +1,19 @@
-# SpoolWinder
-3d print wire winder and connect two spools of used plastic
-![image](https://github.com/rsayko/SpoolWinder/assets/33004022/1e69d4d8-12d4-4916-8b71-cae2f8458626)
+# SpoolWinder  
+3d print wire winder and connect two spools of used plastic   
+**З'єднай дві пусті катушки від пластику та надрукуй тримачку для кабелю. Треба дві однакові катушки від пластику. Зроблено спеціально для ДрукАрмії.**  
+![image](https://github.com/rsayko/SpoolWinder/assets/33004022/1e69d4d8-12d4-4916-8b71-cae2f8458626)  
 
-Більш детальна інструкція буде скоро
+Надихнувся цим проектом  
+![image](https://github.com/rsayko/SpoolWinder/assets/33004022/f3c3b2ca-ada6-4ce1-86a3-4d1e30293ba1)  
+## Короткий FAQ
 
-1. Завантажуєш OpenScad https://openscad.org/downloads.html
-2. Скачуєш проект SpoolWinder https://github.com/rsayko/SpoolWinder
+Q: **Чи треба допомога?**  
+A: Так, вітається будь яка допомога з наіменуванням параметрів або інструкцією. Також потрібно покращити майже всі функції і оптимізувати код.  
+*більше в кінці по мірі надходження питань*
+
+## Коротка інструкція
+1. Завантажуєш OpenScad https://openscad.org/downloads.html  
+2. Скачуєш проект SpoolWinder https://github.com/rsayko/SpoolWinder  
 3. Відкриваєш файл SpoolWireWinder2.scad (файл threads.scad має бути в тій самій папці де і SpoolWinder2.scad)
 4. Вводиш параметри на панелі зправа. Поміряй все у міліметрах
 
@@ -21,3 +29,60 @@
 9. Відкриваєш у слайсері
 10. Якщо слайсей не підтримує розєднання обєкту то скористайся плагіном, наприклад для Cura є плагін MeshTools
 
+
+## Параметри - Детальна інструкція  
+### Main
+Основні параметри це **spool diameter**, **hole diameter** та **spool width**. Міряєш і вводиш ці параметри на панелі зправа.  
+До речі, **spool diameter** краще ввести на мілліметр-два більше, так дві катушки точно помістяться на основу.  
+![main](https://github.com/rsayko/SpoolWinder/assets/33004022/8bee8533-e11f-4f4f-a78e-b274435169b9)
+
+
+При швидкому рендері ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/cc82cee9-20a7-40d7-8ec4-ccdd9d083aff) будуть артефакти, нічого страшного, при фінальному ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/d7eeab8e-e63c-4231-8353-298401666b9b)
+ їх не буде.  
+
+
+#### plate height  
+Це рамка або додатковий матеріал який буде тримати катушку  
+![plate_height](https://github.com/rsayko/SpoolWinder/assets/33004022/f8c15e56-7763-4c98-9183-7bc893c3e260)  
+
+на розмір **spool diameter**, **hole diameter** та **spool width** це ніяк не впливає, але впливає на товщину стінки самої тримачки  
+![image](https://github.com/rsayko/SpoolWinder/assets/33004022/94bffaad-ce87-4b33-ae3f-89d1b77f8335)
+
+#### hollow_plate  
+Параметр зробить дирку в основі, це зекономить час та пластик, але послабить саму структуру  
+![hollow_plate](https://github.com/rsayko/SpoolWinder/assets/33004022/2f09a9b6-92b5-403c-be3d-fd7a5b7f784b)
+
+### Split   
+TBD  
+#### split base   
+TBD  
+#### number of connectors  
+TBD  
+### Holder base  
+TBD  
+#### hollow base  
+TBD  
+#### holder top fillet  
+TBD  
+#### holder bottom fillet  
+TBD  
+### Handle  
+TBD  
+#### handle diameter  
+TBD  
+#### handle distance  
+TBD  
+#### handle margin  
+TBD  
+#### handle champfer  
+TBD  
+#### separate handle  
+TBD  
+### Other  
+TBD  
+#### wall thickness  
+TBD  
+#### render quality  
+TBD  
+#### nozzle diameter  
+TBD  
