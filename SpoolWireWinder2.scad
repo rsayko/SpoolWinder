@@ -1,8 +1,8 @@
-// Spool cable wire winder v2.0
+// Spool cable wire winder v2.1
 // Written by Sayko R. <roman.sayko@gmail.com>
 // Feel free to mail me about bugs and propositions
 
-//use <threads.scad>
+use <threads.scad>
 /*[ Main ]*/
 
 // Diameter of the spool
@@ -73,6 +73,30 @@ if(separate_handle){
      cylinder(h = spool_diameter - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);   
 }
 
+TheTool();
+translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
+
+//Rod Start
+difference() {
+translate([0,-hole_diameter - plate_height*2, -wall_thickness/2])
+RodStart2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8, wall_thickness, hole_diameter + plate_height- (nozzle_diameter * 2), 20,0,0);
+translate([0,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness])
+cylinder(h=spool_width,
+      r=(hole_diameter / 2) /2, $fn=6,
+      center=true);
+}
+
+//Rod End
+difference() {
+translate([hole_diameter*2,-hole_diameter - plate_height*2, -wall_thickness/2])
+RodEnd2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8, hole_diameter + plate_height- (nozzle_diameter * 2), wall_thickness);
+
+translate([hole_diameter*2,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness]) 
+cylinder(h=spool_width,
+      r=(hole_diameter / 2) /2, $fn=6,
+      center=true);
+}
+
 module Plate(is_first){
   
    Base(false, is_first);
@@ -90,7 +114,14 @@ module Plate(is_first){
    echo("Half_plate_width is ", half_plate_width);
 }
 
-
+module TheTool(){
+    translate([0,0,5])
+    cube([10, hole_diameter * 0.8, 10], center = true);
+    translate([0,0,10])
+    cylinder(h=20,
+      r=(hole_diameter / 2) /2 - nozzle_diameter, $fn=6,
+      center=true);
+    }
 
 module Handle_part_base(is_second_half){
     translate([0,0,wall_thickness])
