@@ -91,6 +91,8 @@ TBD
 #### wall thickness  
 TBD  
 #### render quality  
-TBD  
+Якість рендеру. Якщо треба часто змінювати якісь параметри і дивитись на результат то раджу встановити **render quality** на 6 (так не буде лагати), перед тим як робити фiнальний рентер, раджу встановити на 24  
+![render quality](https://github.com/rsayko/SpoolWinder/assets/33004022/7829d8d7-6dcb-4f88-81ae-e5b463957a27)
+
 #### nozzle diameter  
 TBD  
