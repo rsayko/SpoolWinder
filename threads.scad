@@ -579,7 +579,7 @@ module RodEnd2(diameter, height, base_diameter, base_height, thread_len=0, threa
   thread_diam = (thread_diam==0) ? 0.75*diameter : thread_diam;
   thread_len = (thread_len==0) ? 0.5*diameter : thread_len;
   thread_pitch = (thread_pitch==0) ? ThreadPitch(thread_diam) : thread_pitch;
-  ScrewHole(thread_diam, thread_len, [0, 0, height], [180,0,0], thread_pitch)
+  ScrewHole(thread_diam, height, [0, 0, height], [180,0,0], thread_pitch)
     cylinder(r=diameter/2, h=height, $fn=24*diameter);
   cylinder(r=base_diameter/2, h=base_height, $fn=24*base_diameter);
 }
