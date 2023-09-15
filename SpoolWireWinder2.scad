@@ -78,7 +78,7 @@ translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
 
 //Rod Start
 difference() {
-translate([0,-hole_diameter - plate_height*2, -wall_thickness/2])
+translate([0,-hole_diameter - plate_height*2, 0])
 RodStart2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8, wall_thickness, hole_diameter + plate_height- (nozzle_diameter * 2), 0,0,0);
 translate([0,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness])
 cylinder(h=spool_width,
@@ -88,10 +88,10 @@ cylinder(h=spool_width,
 
 //Rod End
 difference() {
-translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, -wall_thickness/2])
+translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, 0])
 RodEnd2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8, hole_diameter + plate_height- (nozzle_diameter * 2), wall_thickness);
 
-translate([hole_diameter*2,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness]) 
+translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness]) 
 cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
