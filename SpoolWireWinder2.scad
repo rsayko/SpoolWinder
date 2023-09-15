@@ -1,4 +1,4 @@
-// Spool cable wire winder v2.2
+// Spool cable wire winder v2.3
 // Written by Sayko R. <roman.sayko@gmail.com>
 // Feel free to mail me about bugs and propositions
 
@@ -60,7 +60,7 @@ spool_radius = spool_diameter / 2;
 
 connector_size = ((hole_diameter + plate_height * 2)/ (number_of_connectors))/2;
 echo("Connector size is ", connector_size);
-half_plate_width = spool_diameter + nozzle_diameter + (split_base?connector_size*2:0);
+half_plate_width = spool_diameter + nozzle_diameter + (split_base?connector_size:0);
 
 
 
@@ -72,7 +72,7 @@ if(separate_handle){
     translate([spool_radius,0,0])
      cylinder(h = spool_diameter - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);   
 }
-
+/*
 TheTool();
 translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
 
@@ -96,7 +96,7 @@ cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
 }
-
+*/
 module Plate(is_first){
   
    Base(false, is_first);
@@ -131,7 +131,7 @@ module Handle_part_base(is_second_half){
     if(!separate_handle){
         translate([0,0,wall_thickness + handle_distance + handle_diameter/2])
         rotate([-90,0,0])
-        cylinder(h = spool_radius + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
+        cylinder(h = spool_radius + nozzle_diameter/2, r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
         if(split_base){
             if(!is_second_half){
                 translate([0,spool_radius,wall_thickness + handle_distance + handle_diameter/2])
@@ -182,14 +182,14 @@ module Handle_part_base_cut(is_second_half){
      if(is_second_half){
             translate([0,spool_radius-connector_size + 0.005,wall_thickness + handle_distance + handle_diameter/2])
         rotate([-90,0,0])
-        cylinder(h = connector_size, r = handle_diameter/4 + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
+        cylinder(h = connector_size*2, r = handle_diameter/4 + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
         }
         
     //Handle
     if(separate_handle){
-        translate([0,hole_radius,wall_thickness + handle_distance + handle_diameter/2])
+        translate([0,hole_radius,wall_thickness + handle_distance + handle_diameter/2+1])
         rotate([-90,0,0])
-        cylinder(h = spool_diameter/2 - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2 + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
+        #cylinder(h = spool_diameter/2 - hole_diameter + nozzle_diameter, r = handle_diameter/2 + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
     }
     //translate([0,0,handle_distance + handle_diameter])
     //rotate([holder_base_chamfer_angle,0,0])
