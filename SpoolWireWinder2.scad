@@ -1,4 +1,4 @@
-// Spool cable wire winder v2.1
+// Spool cable wire winder v2.2
 // Written by Sayko R. <roman.sayko@gmail.com>
 // Feel free to mail me about bugs and propositions
 
