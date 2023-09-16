@@ -72,7 +72,7 @@ if(separate_handle){
     translate([spool_radius,0,0])
      cylinder(h = spool_diameter - hole_diameter + (split_base?0:nozzle_diameter), r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);   
 }
-/*
+
 TheTool();
 translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
 
@@ -96,7 +96,7 @@ cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
 }
-*/
+
 module Plate(is_first){
   
    Base(false, is_first);
@@ -131,7 +131,7 @@ module Handle_part_base(is_second_half){
     if(!separate_handle){
         translate([0,0,wall_thickness + handle_distance + handle_diameter/2])
         rotate([-90,0,0])
-        cylinder(h = spool_radius + nozzle_diameter/2, r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
+        cylinder(h = spool_radius + nozzle_diameter, r = handle_diameter/2, $fn=render_quality*hole_radius, center = false);
         if(split_base){
             if(!is_second_half){
                 translate([0,spool_radius,wall_thickness + handle_distance + handle_diameter/2])
