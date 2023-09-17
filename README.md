@@ -1,4 +1,4 @@
-# SpoolWinder  
+# SpoolWinder v2.4  
 3d print wire winder and connect two spools of used plastic   
 **З'єднай дві пусті катушки від пластику та надрукуй тримачку для кабелю. Треба дві однакові катушки від пластику. Зроблено спеціально для ДрукАрмії.** https://drukarmy.org.ua/  
 ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/825e9118-9ffa-4563-9c80-87d6ea52dae9)  
