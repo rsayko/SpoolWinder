@@ -3,6 +3,11 @@
 **З'єднай дві пусті катушки від пластику та надрукуй тримачку для кабелю. Треба дві однакові катушки від пластику. Зроблено спеціально для ДрукАрмії.** https://drukarmy.org.ua/  
 ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/825e9118-9ffa-4563-9c80-87d6ea52dae9)  
 ![render](https://github.com/rsayko/SpoolWinder/assets/33004022/d21030c8-96f8-4e6a-a57f-7b73a93c5a7f)  
+![photo_5204053491805441671_y](https://github.com/rsayko/SpoolWinder/assets/33004022/6154ef27-96f5-4a31-8081-e21282d33c42)  
+![photo_5204053491805441665_y](https://github.com/rsayko/SpoolWinder/assets/33004022/8a79b7e5-dae4-4193-96b4-22619a757e95)  
+
+
+
 
 ![cover](https://github.com/rsayko/SpoolWinder/assets/33004022/f381b260-6627-48bb-9219-fec0f092bd63)  
 
@@ -108,7 +113,15 @@ TBD
 TBD  
 #### render quality  
 Якість рендеру. Якщо треба часто змінювати якісь параметри і дивитись на результат то раджу встановити **render quality** на 6 (так не буде лагати), перед тим як робити фiнальний рентер, раджу встановити на 24  
+
 ![render quality](https://github.com/rsayko/SpoolWinder/assets/33004022/7829d8d7-6dcb-4f88-81ae-e5b463957a27)
 
 #### nozzle diameter  
 TBD  
+
+
+## Фото  
+![photo_5204053491805441663_y](https://github.com/rsayko/SpoolWinder/assets/33004022/8e04ebcb-f4af-4fe6-99bd-2581abcc033b)  
+![photo_5206417746747838071_y](https://github.com/rsayko/SpoolWinder/assets/33004022/6295ee37-015e-41c5-9ca6-540c47093b9a)  
+![photo_5204053491805441670_y](https://github.com/rsayko/SpoolWinder/assets/33004022/51f0f8fe-52ad-4e21-a860-ad9d419924cd)  
+
