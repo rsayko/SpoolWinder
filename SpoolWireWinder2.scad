@@ -1,4 +1,4 @@
-// Spool cable wire winder v2.3
+// Spool cable wire winder v2.4
 // Written by Sayko R. <roman.sayko@gmail.com>
 // Feel free to mail me about bugs and propositions
 
@@ -76,6 +76,12 @@ if(separate_handle){
 TheTool();
 translate([-hole_diameter - plate_height * 3,0,0]) TheTool();
 
+translate([0,-hole_diameter - plate_height*2, 0])
+iRodSrart();
+translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, 0])
+iRodEnd();
+
+/*
 //Rod Start
 difference() {
 translate([0,-hole_diameter - plate_height*2, 0])
@@ -84,8 +90,8 @@ translate([0,-hole_diameter - plate_height*2, spool_width / 2 - wall_thickness])
 cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
-}
-
+}*/
+/*
 //Rod End
 difference() {
 translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, 0])
@@ -95,6 +101,28 @@ translate([-hole_diameter - plate_height * 3,-hole_diameter - plate_height*2, sp
 cylinder(h=spool_width,
       r=(hole_diameter / 2) /2, $fn=6,
       center=true);
+}*/
+
+module iRodEnd(){
+    difference() {
+RodEnd2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8, hole_diameter + plate_height- (nozzle_diameter * 2), wall_thickness);
+
+translate([0,0, spool_width / 2 - wall_thickness]) 
+cylinder(h=spool_width,
+      r=(hole_diameter / 2) /2, $fn=6,
+      center=true);
+}
+    
+}
+
+module iRodSrart(){
+    difference() {
+        RodStart2(hole_diameter - (nozzle_diameter * 2), spool_width * 0.8 + (wall_thickness*3), wall_thickness, hole_diameter + plate_height- (nozzle_diameter * 2), 0,0,0, hole_radius - nozzle_diameter);
+        translate([0,0, spool_width / 2 + wall_thickness])
+        cylinder(h=spool_width + wall_thickness*3,
+              r=(hole_diameter / 2) /2, $fn=6,
+              center=true);
+        }
 }
 
 module Plate(is_first){

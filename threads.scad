@@ -546,14 +546,16 @@ module RodStart(diameter, height, thread_len=0, thread_diam=0, thread_pitch=0) {
 }
 
 // Solid rod on the bottom, external threads on the top.
-module RodStart2(diameter, height, start_height, start_diameter, thread_len=0, thread_diam=0, thread_pitch=0) {
+module RodStart2(diameter, height, start_height, start_diameter, thread_len=0, thread_diam=0, thread_pitch=0, hole_radius) {
   // A reasonable default.
   thread_diam = (thread_diam==0) ? 0.75*diameter : thread_diam;
   thread_len = (thread_len==0) ? 0.5*diameter : thread_len;
   thread_pitch = (thread_pitch==0) ? ThreadPitch(thread_diam) : thread_pitch;
 
   cylinder(r=start_diameter/2, h=start_height, $fn=24*diameter);
-
+  cylinder(r=hole_radius, h=start_height*3, $fn=24*hole_radius);
+  //translate([0,0,start_height*2])
+  //cylinder(r1=hole_radius, r2=thread_diam/2, h=start_height, $fn=24*hole_radius);
   translate([0, 0, start_height])
     ScrewThread(thread_diam, height, thread_pitch,
       tip_height=thread_pitch, tip_min_fract=0.75);
