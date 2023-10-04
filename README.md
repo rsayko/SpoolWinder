@@ -1,10 +1,13 @@
 # SpoolWinder v2.4  
-3d print wire winder and connect two spools of used plastic   
+3d print wire winder and connect two spools of used plastic  
+**NEW** Додав коннектори для старлінк. Файл StarLink.scad  
+![startlink](https://github.com/rsayko/SpoolWinder/assets/33004022/777c5e76-3cb0-4835-b4d7-b9f4f6db629d)  
+
 **З'єднай дві пусті катушки від пластику та надрукуй тримачку для кабелю. Треба дві однакові катушки від пластику. Зроблено спеціально для ДрукАрмії.** https://drukarmy.org.ua/  
 ![image](https://github.com/rsayko/SpoolWinder/assets/33004022/825e9118-9ffa-4563-9c80-87d6ea52dae9)  
 ![render](https://github.com/rsayko/SpoolWinder/assets/33004022/d21030c8-96f8-4e6a-a57f-7b73a93c5a7f)  
-![photo_5204053491805441671_y](https://github.com/rsayko/SpoolWinder/assets/33004022/6154ef27-96f5-4a31-8081-e21282d33c42)  
-![photo_5204053491805441665_y](https://github.com/rsayko/SpoolWinder/assets/33004022/8a79b7e5-dae4-4193-96b4-22619a757e95)  
+![cover2](https://github.com/rsayko/SpoolWinder/assets/33004022/87491fe4-a555-45b0-994e-f09e5aa76bc3)
+
 
 
 
@@ -26,7 +29,7 @@ A: Так, вітається будь яка допомога з наімену
 *більше в кінці по мірі надходження питань*
 
 ## Що буде в наступній версії  
-1. Вмонтовані гнізда для кабелів StarLink  
+1. Вмонтовані гнізда для кабелів StarLink Done!  
 2. Можливість використовувати катушки різних розмірів  
 
 ## Коротка інструкція
