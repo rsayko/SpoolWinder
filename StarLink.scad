@@ -1,4 +1,4 @@
-// StarLink Extras for Spool cable wire winder v2.4
+// StarLink Extras for Spool cable wire winder v2.5
 // Written by Sayko R. <roman.sayko@gmail.com>
 
 use <threads.scad>
