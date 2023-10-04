@@ -12,7 +12,7 @@ hole_diameter = 35.0;
 //Spool width
 spool_width = 60;
 // Height of the base that will hold spool (overall height will be hole_diameter + plate height * 2)
-plate_height = 20;
+plate_height = 15;
 //(Beta) Try to reduce use of plastic (strenght may suffer)
 hollow_plate = true;
 
@@ -26,22 +26,22 @@ number_of_connectors = 5;
 //make hole under the handle to reduce use of plastic
 hollow_base = true;
 //normaly the reasonable value is 20, but you can play with parameters if you want something fancy
-holder_top_fillet = 20;//[0:90]
-holder_bottom_fillet = 20;//[0:90]
+holder_top_fillet = 35;//[0:90]
+holder_bottom_fillet = 13;//[0:90]
 
 /*[ Handle ]*/
 
 // diameter of the handle
-handle_diameter = 30;
+handle_diameter = 20;
 
 //Distance of handle from base plate
-handle_distance = 45;
+handle_distance = 25;
 
 //additional material forn make handle more strenght
-handle_margin = 3;
+handle_margin = 2;
 
 //additional material for handle on the beggining
-handle_champfer = 20; //[0:50]
+handle_champfer = 17; //[0:50]
 
 //print handle separated from base
 separate_handle = false;
@@ -49,7 +49,7 @@ separate_handle = false;
 /*[ Other ]*/
 
 //Thickness of the wall
-wall_thickness = 3.5;
+wall_thickness = 2.5;
 //before final render set it to 24, for debugging 6 is ok
 render_quality = 24;//[1:24]
 //Diameter of the printer's nozzle, also used for tollerance
@@ -217,7 +217,7 @@ module Handle_part_base_cut(is_second_half){
     if(separate_handle){
         translate([0,hole_radius,wall_thickness + handle_distance + handle_diameter/2+1])
         rotate([-90,0,0])
-        #cylinder(h = spool_diameter/2 - hole_diameter + nozzle_diameter, r = handle_diameter/2 + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
+        cylinder(h = spool_diameter/2 - hole_diameter + nozzle_diameter, r = handle_diameter/2 + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
     }
     //translate([0,0,handle_distance + handle_diameter])
     //rotate([holder_base_chamfer_angle,0,0])
@@ -278,7 +278,7 @@ module Base(is_second_half, is_first){
         cylinder(h = wall_thickness + 1, r = hole_radius + nozzle_diameter, $fn=render_quality*hole_radius, center = false);
         if(hollow_plate){
             translate([-hole_diameter/2,0,0])
-           cube([hole_diameter, half_plate_width/2 - (split_base?plate_height:plate_height/2), wall_thickness+1], center = false);     
+           cube([hole_diameter, half_plate_width/2 - (split_base?plate_height*1.5:plate_height/2), wall_thickness+1], center = false);     
         }
         if(split_base){
                 if(is_second_half){
