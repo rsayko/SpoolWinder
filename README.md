@@ -1,4 +1,4 @@
-# SpoolWinder v2.4  
+# SpoolWinder v2.5  
 3d print wire winder and connect two spools of used plastic  
 **NEW** Додав коннектори для старлінк. Файл StarLink.scad  
 ![startlink](https://github.com/rsayko/SpoolWinder/assets/33004022/777c5e76-3cb0-4835-b4d7-b9f4f6db629d)  
